@@ -3,8 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    chunkSizeWarningLimit: 1164, // Adjust the limit as needed
+  esbuild: {
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   assetsInclude: ['**/*.glb'],
 });
