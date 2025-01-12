@@ -9,7 +9,7 @@ export default defineConfig({
     include: /src\/.*\.jsx?$/,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   assetsInclude: ['**/*.glb'],
 });
